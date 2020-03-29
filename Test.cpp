@@ -30,11 +30,11 @@ TEST_CASE("Test replacement of f and b") {
 }
 
 TEST_CASE("Test replacement of lower-case and upper-case") {
-    string text = "Happi xxx yyy";
-    CHECK(find(text, "happi") == string("Happi"));
-    CHECK(find(text, "Happi") == string("Happi"));
-    CHECK(find(text, "HAPPI") == string("Happi"));
-    CHECK(find(text, "HaPpI") == string("Happi"));
+    string text = "Happy xxx yyy";
+    CHECK(find(text, "happy") == string("Happy"));
+    CHECK(find(text, "Happy") == string("Happy"));
+    CHECK(find(text, "HAPPY") == string("Happy"));
+    CHECK(find(text, "HaPpY") == string("Happy"));
 }
 
 TEST_CASE("Test replacement of v and w") {
@@ -52,7 +52,7 @@ TEST_CASE("Test replacement of v and w") {
 TEST_CASE("Test replacement of upper-case and lower-case") {
     string text = "fun but scary";
     CHECK(find(text, "fun") == string("fun"));
-    CHECK(find(text, "FuT") == string("fun"));
+    CHECK(find(text, "FuN") == string("fun"));
     CHECK(find(text, "fUn") == string("fun"));
     CHECK(find(text, "ScArY") == string("scary"));
     CHECK(find(text, "scaRy") == string("scary"));
@@ -107,7 +107,7 @@ TEST_CASE("Test replacement of s and z") {
 
 TEST_CASE("Test replacement of g and j") {
     string text = "join to good jump game ";
-    CHECK(find(text, "join") == string("join"));
+    CHECK(find(text, "") == string("join"));
     CHECK(find(text, "goin") == string("join"));
     CHECK(find(text, "good") == string("good"));
     CHECK(find(text, "jood") == string("good"));
@@ -130,7 +130,7 @@ TEST_CASE("Test replacement of d and t") {
     CHECK(find(text, "the") == string("the"));
     CHECK(find(text, "dhe") == string("the"));
     CHECK(find(text, "table") == string("table"));
-    CHECK(find(text, "bable") == string("table"));
+    CHECK(find(text, "dable") == string("table"));
 }
 
 TEST_CASE("Test replacement of o and u") {
